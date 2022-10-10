@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('includes/head') %>
+    <link rel="stylesheet" href="css/contact.css" />
+    <title>Contact Us</title>
+  </head>
+  <body>
+    <%- include('includes/navbar') %>
+
+    <section class="contact">
+      <div class="container contact__container">
+        <h1>Contact Us</h1>
+        <form actions="/contact" method="POST" class="contact__form">
+          <div class="form__inputs">
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Your Name"
+              required
+            />
+            <input
+              type="number"
+              name="number"
+              id="number"
+              placeholder="Your Phone Number"
+              required
+            />
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Your Email Address"
+              required
+            />
+          </div>
+          <textarea
+            name="message"
+            id="message"
+            rows="7"
+            placeholder="Your Message"
+            required
+          ></textarea>
+          <input type="submit" class="btn" id="submit" value="Send Message" />
+        </form>
+      </div>
+    </section>
+
+    <%- include('includes/footer') %>
+    <script src="script/main.js"></script>
+  </body>
+</html>
